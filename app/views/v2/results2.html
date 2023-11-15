@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+  {% include 'v2/includes/header' %}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back to search",
+    href: "start"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Search results ({{ data['applications'].length }})</h1>
+
+
+<p><strong>Sort by:</strong>&nbsp;&nbsp; Date submitted &nbsp;&nbsp;|&nbsp;&nbsp; <a href="#">Last name</a></p>
+
+<div class="search-card__container">
+  {# loop through all the priority categories  #}
+  {% for i in range(0, data['applications'].length) -%}
+
+  <div class="search-card">
+
+    <div class="search-card__name">
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-1"> {{ data['applications'][i].lastName }}, {{ data['applications'][i].firstName }}</h2>
+      <p class="govuk-!-font-size-16 govuk-!-margin-bottom-1">DOB: {{ data['applications'][i].dateOfBirth | govukDate }}</p>
+      <p class="govuk-!-font-size-16">Ref: {{ data['applications'][i].referenceNumber }}</p>
+    </div>
+
+    <div class="search-card__address">
+      <p class="govuk-!-font-size-16 govuk-!-margin-bottom-1">{{ data['applications'][i].address }},<br>{{ data['applications'][i].postcode | uppercase }}</p>
+      <p class="govuk-!-font-size-16">{{ data['applications'][i].emailAddress }}</p>
+    </div>
+
+    <div class="search-card__status">
+      {{ data['applications'][i].status | tag | safe }}<br>
+      <p class="govuk-!-font-size-14 govuk-!-margin-top-2">Submitted:<br> {{ data['applications'][i].dateOfBirth | govukDate }}</p>
+    </div>
+
+  </div>
+  {%- endfor %}
+  </div>
+
+        
+{% endblock %}

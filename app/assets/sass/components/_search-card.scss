@@ -1,0 +1,29 @@
+.search-card__container {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.search-card {
+  display: flex;
+  justify-content: flex-start;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+  column-gap: 20px;
+  align-content: flex-start;
+}
+
+.search-card__name {
+  flex-basis: 18rem;
+  align-self: flex-start;
+}
+
+.search-card__address {
+  flex-grow: 3;
+  align-self: flex-start;
+}
+
+.search-card__status {
+  align-self: flex-end;
+  text-align: right;
+}
