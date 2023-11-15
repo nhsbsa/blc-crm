@@ -22,7 +22,7 @@
       <th scope="col" class="govuk-table__header app-custom-class">Name</th>
       <th scope="col" class="govuk-table__header app-custom-class">Reference number</th>
       <th scope="col" class="govuk-table__header app-custom-class">Address</th>
-      <th scope="col" class="govuk-table__header app-custom-class">Date or birth</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Date of birth</th>
       <th scope="col" class="govuk-table__header app-custom-class">Email address</th>
       <th scope="col" class="govuk-table__header app-custom-class">Status</th>
     </tr>
@@ -36,7 +36,7 @@
     <th scope="row" class="govuk-table__header">{{ data['applications'][i].lastName }}, {{ data['applications'][i].firstName }}</th>
     <td class="govuk-table__cell">{{ data['applications'][i].referenceNumber }}</td>
     <td class="govuk-table__cell">{{ data['applications'][i].address }},<br>{{ data['applications'][i].postcode | uppercase }}</td>
-    <td class="govuk-table__cell">{{ data['applications'][i].dateOfBirth }}</td>
+    <td class="govuk-table__cell">{{ data['applications'][i].dateOfBirth | govukDate }}</td>
     <td class="govuk-table__cell">{{ data['applications'][i].emailAddress }}</td>
     <td class="govuk-table__cell govuk-table__cell--numeric">{{ data['applications'][i].status | tag | safe }}</td>
   </tr>
