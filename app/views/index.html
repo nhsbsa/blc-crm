@@ -4,17 +4,33 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-l">Versions of CRM</h1>
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
 
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
 
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+
+
+
+
+  
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Version 1 (November 23)
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+     
+      <a class="govuk-button" href="v1/start">Version 1 start</a>
+    </div>
   </div>
+ 
+ 
 </div>
+
+
 
 {% endblock %}
