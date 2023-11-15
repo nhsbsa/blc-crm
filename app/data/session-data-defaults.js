@@ -80,13 +80,13 @@ module.exports = {
     {
       "referenceNumber": "X1Y-2Z3-4A5B6",
       "firstName": "Sara",
-      "lastName": "M.",
-      "address": "623 Elm Street, Apt 45, Hillview Residences",
+      "lastName": "Nguyen",
+      "address": "821 Oak Street, Apt 89, Lakeview Residences,",
       "postcode": "GH78 9IJ",
       "dateOfBirth": "1992-02-18",
       "emailAddress": "saram@example.com",
       "status": "Active",
-      "submitted": "2023-10-25"
+      "submitted": "2023-10-06"
     },
     {
       "referenceNumber": "L4K-6J8-3R2S1",

@@ -32,7 +32,8 @@
   </ul>
   <div class="govuk-tabs__panel" id="ref">
 
-    <form action="results" method="post" autocomplete="off">
+    <form action="get-results" method="post" autocomplete="off">
+
       {{ govukInput({
         label: {
           text: "Reference number"
@@ -46,6 +47,8 @@
         spellcheck: false
       }) }}
 
+      <input type="hidden" name="search-type" value="refnum" />
+
       {{ govukButton({
       text: "Search",
       classes: "govuk-!-margin-top-0"
@@ -55,6 +58,7 @@
   </div>
 
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="details">
+    <form action="get-results" method="post" autocomplete="off">
 
     {{ govukInput({
       label: {
@@ -70,7 +74,7 @@
 
     {{ govukDateInput({
       id: "dob",
-      namePrefix: "dob",
+      namePrefix: "[date-of-birth]",
       fieldset: {
         legend: {
           text: "Date of birth"
@@ -98,15 +102,18 @@
       ]
     }) }}
 
+    <input type="hidden" name="search-type" value="basic" />
+
     {{ govukButton({
       text: "Search",
       classes: "govuk-!-margin-top-0"
     }) }}
 
+    </form>
   </div>
 
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="postcode">
-    <form action="results" method="post" autocomplete="off">
+    <form action="get-results" method="post" autocomplete="off">
 
       {{ govukInput({
         label: {
@@ -116,6 +123,8 @@
         id: "search-postcode",
         name: "search-postcode"
       }) }}
+
+      <input type="hidden" name="search-type" value="postcode" />
 
       {{ govukButton({
       text: "Search",

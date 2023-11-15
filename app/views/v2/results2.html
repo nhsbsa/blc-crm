@@ -13,31 +13,33 @@
 
 {% block content %}
 
-<h1 class="govuk-heading-l">Search results ({{ data['applications'].length }})</h1>
+<h1 class="govuk-heading-l tag-">Search results ({{ data['results'].length }})</h1>
 
+<p class="govuk-!-margin-bottom-6">Results for <strong>{{ data['search-term'] }}</strong></p>
 
-<p><strong>Sort by:</strong>&nbsp;&nbsp; Date submitted &nbsp;&nbsp;|&nbsp;&nbsp; <a href="#">Last name</a></p>
+<p><strong>Sort by:</strong>&nbsp;&nbsp; Date submitted &nbsp;&nbsp;|&nbsp;&nbsp; <a href="#">Status</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="#">Last name</a></p>
 
 <div class="search-card__container">
+
   {# loop through all the priority categories  #}
-  {% for i in range(0, data['applications'].length) -%}
+  {% for i in range(0, data['results'].length) -%}
 
   <div class="search-card">
 
     <div class="search-card__name">
-      <h2 class="govuk-heading-m govuk-!-margin-bottom-1"> {{ data['applications'][i].lastName }}, {{ data['applications'][i].firstName }}</h2>
-      <p class="govuk-!-font-size-16 govuk-!-margin-bottom-1">DOB: {{ data['applications'][i].dateOfBirth | govukDate }}</p>
-      <p class="govuk-!-font-size-16">Ref: {{ data['applications'][i].referenceNumber }}</p>
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-1"> {{ data['applications'][data['results'][i]].lastName }}, {{ data['applications'][data['results'][i]].firstName }}</h2>
+      <p class="govuk-!-font-size-16 govuk-!-margin-bottom-1">DOB: {{ data['applications'][data['results'][i]].dateOfBirth | govukDate }}</p>
+      <p class="govuk-!-font-size-16">Ref: {{ data['applications'][data['results'][i]].referenceNumber }}</p>
     </div>
 
     <div class="search-card__address">
-      <p class="govuk-!-font-size-16 govuk-!-margin-bottom-1">{{ data['applications'][i].address }},<br>{{ data['applications'][i].postcode | uppercase }}</p>
-      <p class="govuk-!-font-size-16">{{ data['applications'][i].emailAddress }}</p>
+      <p class="govuk-!-font-size-16 govuk-!-margin-bottom-1">{{ data['applications'][data['results'][i]].address }},<br>{{ data['applications'][data['results'][i]].postcode | uppercase }}</p>
+      <p class="govuk-!-font-size-16">{{ data['applications'][data['results'][i]].emailAddress }}</p>
     </div>
 
     <div class="search-card__status">
-      {{ data['applications'][i].status | tag | safe }}<br>
-      <p class="govuk-!-font-size-14 govuk-!-margin-top-2">Submitted:<br> {{ data['applications'][i].dateOfBirth | govukDate }}</p>
+      {{ data['applications'][data['results'][i]].status | tag | safe }}<br>
+      <p class="govuk-!-font-size-14 govuk-!-margin-top-2">Submitted:<br> {{ data['applications'][data['results'][i]].submitted | govukDate }}</p>
     </div>
 
   </div>
