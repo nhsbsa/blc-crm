@@ -1,21 +1,19 @@
-//
-// For guidance on how to create filters see:
-// https://prototype-kit.service.gov.uk/docs/filters
-//
-
 const govukPrototypeKit = require('govuk-prototype-kit')
 const addFilter = govukPrototypeKit.views.addFilter
-
-// Add your filters here
 
 addFilter('uppercase', function (content) {
   return content.toUpperCase()
 })
 
+// filter to turn status text into a tage
 addFilter('tag', function (content) {
-  let colour = 'blue'
+  let colour = 'orange'
   if (content === 'Active') {
     colour = 'green'
+  } else if (content === 'Cancelled') {
+    colour = 'grey'
+  } else if (content === 'Expired') {
+    colour = 'grey'
   }
   let tagCode = '<strong class="govuk-tag govuk-tag--'+ colour +'">' + content + '</strong>'
   return tagCode
