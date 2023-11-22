@@ -18,13 +18,23 @@ router.use((req, res, next) => {
 // Add your routes here
 router.post("/v3/get-results", function (req, res) {
   // grab search type
-  let type = ''
+  let type = []
   let term = ''
   // load all applications
   let applications = req.session.data['applications']
   console.log('applications: ' + applications.length)
   // create an empty array to store matching results
   let results = []
+
+  if (req.session.data['reference-number']){
+    type.push('refnum')
+  }
+  if (req.session.data['search-postcode']){
+    type.push('postcode')
+  }
+  if (req.session.data['date-of-birth'][2]){
+    type.push('dob')
+  }
 
   if (type.includes('refnum')) {
     console.log('searching ref number...')
@@ -52,7 +62,7 @@ router.post("/v3/get-results", function (req, res) {
       }
     }
   }
-  else if (type.includes('basic')) {
+  else if (type.includes('dob')) {
     console.log('searching basic details...')
     // turn entered date of birth into a string to compare
     term = req.session.data['date-of-birth'][2] + '-'+ req.session.data['date-of-birth'][1].padStart(2, '0') + '-'+ req.session.data['date-of-birth'][0].padStart(2, '0')
