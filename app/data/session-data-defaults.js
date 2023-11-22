@@ -8,8 +8,9 @@ module.exports = {
       "postcode": "SW17 E2",
       "dateOfBirth": "1995-09-29",
       "emailAddress": "fatima.ahmed@email.com",
-      "status": "Pending",
-      "submitted": "2023-10-26"
+      "status": "Incomplete",
+      "submitted": "2023-11-09T12:11:00",
+      "dateOfLoss": "2022"
     },
     {
       "referenceNumber": "L33-YOX-DQ7H",
@@ -19,8 +20,9 @@ module.exports = {
       "postcode": "L16 E6",
       "dateOfBirth": "1991-01-19",
       "emailAddress": "maria.martinez@inbox.com",
-      "status": "Active",
-      "submitted": "2023-10-25"
+      "status": "Expired",
+      "submitted": "2023-11-09T16:32:00",
+      "dateOfLoss": "2022"
     },
     {
       "referenceNumber": "C6R-DEL-LMAS",
@@ -30,8 +32,9 @@ module.exports = {
       "postcode": "L17 B8",
       "dateOfBirth": "1981-11-01",
       "emailAddress": "jose.garcia@mail.com",
-      "status": "Expired",
-      "submitted": "2023-10-04"
+      "status": "Rejected",
+      "submitted": "2023-11-10T10:36:00",
+      "dateOfLoss": "2019"
     },
     {
       "referenceNumber": "G05-7SY-JGC5",
@@ -41,8 +44,9 @@ module.exports = {
       "postcode": "SW12 D9",
       "dateOfBirth": "1984-05-13",
       "emailAddress": "ali.hassan@mail.com",
-      "status": "Cancelled",
-      "submitted": "2023-10-03"
+      "status": "Rejected",
+      "submitted": "2023-11-19T21:33:00",
+      "dateOfLoss": "2022"
     },
     {
       "referenceNumber": "HYA-SAL-EH5H",
@@ -52,8 +56,9 @@ module.exports = {
       "postcode": "M18 B8",
       "dateOfBirth": "1982-06-17",
       "emailAddress": "jasmine.williams@example.com",
-      "status": "Cancelled",
-      "submitted": "2023-09-17"
+      "status": "Rejected",
+      "submitted": "2023-11-08T19:58:00",
+      "dateOfLoss": "2020"
     },
     {
       "referenceNumber": "5DN-SWO-KWHA",
@@ -63,8 +68,9 @@ module.exports = {
       "postcode": "NW17 D4",
       "dateOfBirth": "1949-04-15",
       "emailAddress": "muhammad.khan@mail.com",
-      "status": "Cancelled",
-      "submitted": "2023-09-17"
+      "status": "Rejected",
+      "submitted": "2023-11-08T19:02:00",
+      "dateOfLoss": "2020"
     },
     {
       "referenceNumber": "VXR-TLN-3KFI",
@@ -75,7 +81,8 @@ module.exports = {
       "dateOfBirth": "1982-02-02",
       "emailAddress": "emily.jones@inbox.com",
       "status": "Expired",
-      "submitted": "2023-09-14"
+      "submitted": "2023-11-13T17:20:00",
+      "dateOfLoss": "2020"
     },
     {
       "referenceNumber": "0A0-7WX-8FVZ",
@@ -85,8 +92,9 @@ module.exports = {
       "postcode": "W19 A8",
       "dateOfBirth": "1966-07-26",
       "emailAddress": "muhammad.patel@mail.com",
-      "status": "Cancelled",
-      "submitted": "2023-09-07"
+      "status": "Incomplete",
+      "submitted": "2023-11-13T12:11:00",
+      "dateOfLoss": "2021"
     },
     {
       "referenceNumber": "D3P-7V1-W2D6",
@@ -96,8 +104,9 @@ module.exports = {
       "postcode": "N12 E3",
       "dateOfBirth": "1983-07-22",
       "emailAddress": "ali.ahmed@inbox.com",
-      "status": "Cancelled",
-      "submitted": "2023-08-27"
+      "status": "Rejected",
+      "submitted": "2023-11-14T18:05:00",
+      "dateOfLoss": "2018"
     },
     {
       "referenceNumber": "867-ONV-5NAJ",
@@ -107,8 +116,9 @@ module.exports = {
       "postcode": "M11 C9",
       "dateOfBirth": "1947-12-01",
       "emailAddress": "muhammad.khan@mail.com",
-      "status": "Cancelled",
-      "submitted": "2023-08-25"
+      "status": "Sent",
+      "submitted": "2023-11-13T20:55:00",
+      "dateOfLoss": "2020"
     },
     {
       "referenceNumber": "3L8-W7E-KGFI",
@@ -117,9 +127,9 @@ module.exports = {
       "address": "77 Park Avenue, Manchester, SE14 D1",
       "postcode": "SE14 D1",
       "dateOfBirth": "2002-09-09",
-      "emailAddress": "marcus.johnson@email.com",
       "status": "Expired",
-      "submitted": "2023-08-18"
+      "submitted": "2023-11-13T18:42:00",
+      "dateOfLoss": "2023"
     },
     {
       "referenceNumber": "8RZ-I49-M0B2",
@@ -129,8 +139,9 @@ module.exports = {
       "postcode": "EC16 E6",
       "dateOfBirth": "1957-09-22",
       "emailAddress": "jose.martinez@example.com",
-      "status": "Cancelled",
-      "submitted": "2023-08-16"
+      "status": "Incomplete",
+      "submitted": "2023-11-10T16:58:00",
+      "dateOfLoss": "2018"
     },
     {
       "referenceNumber": "96R-8WF-3SEY",
@@ -140,8 +151,9 @@ module.exports = {
       "postcode": "M18 D6",
       "dateOfBirth": "1983-11-24",
       "emailAddress": "fatima.ahmed@example.com",
-      "status": "Expired",
-      "submitted": "2023-08-15"
+      "status": "Rejected",
+      "submitted": "2023-11-12T17:26:00",
+      "dateOfLoss": "2020"
     },
     {
       "referenceNumber": "DZS-0OP-SJCZ",
@@ -151,8 +163,9 @@ module.exports = {
       "postcode": "N16 B2",
       "dateOfBirth": "1962-10-29",
       "emailAddress": "jasmine.williams@example.com",
-      "status": "Cancelled",
-      "submitted": "2023-08-14"
+      "status": "Failed",
+      "submitted": "2023-11-09T17:09:00",
+      "dateOfLoss": "2021"
     },
     {
       "referenceNumber": "IB1-GHL-2B8A",
@@ -162,8 +175,9 @@ module.exports = {
       "postcode": "N11 C2",
       "dateOfBirth": "1990-02-28",
       "emailAddress": "marcus.williams@example.com",
-      "status": "Expired",
-      "submitted": "2023-08-01"
+      "status": "Rejected",
+      "submitted": "2023-11-12T20:02:00",
+      "dateOfLoss": "2020"
     },
     {
       "referenceNumber": "MLF-Q3J-TDKX",
@@ -173,8 +187,9 @@ module.exports = {
       "postcode": "WC17 A4",
       "dateOfBirth": "1958-07-18",
       "emailAddress": "ali.ahmed@email.com",
-      "status": "Cancelled",
-      "submitted": "2023-07-24"
+      "status": "Failed",
+      "submitted": "2023-11-19T15:28:00",
+      "dateOfLoss": "2020"
     },
     {
       "referenceNumber": "49P-5U9-7S2L",
@@ -184,8 +199,9 @@ module.exports = {
       "postcode": "WC16 D3",
       "dateOfBirth": "1962-02-24",
       "emailAddress": "li.chen@email.com",
-      "status": "Expired",
-      "submitted": "2023-07-13"
+      "status": "Sent",
+      "submitted": "2023-11-22T16:08:00",
+      "dateOfLoss": "2020"
     },
     {
       "referenceNumber": "M5W-8WW-WG3L",
@@ -195,8 +211,9 @@ module.exports = {
       "postcode": "M12 C6",
       "dateOfBirth": "1964-03-12",
       "emailAddress": "jasmine.johnson@inbox.com",
-      "status": "Expired",
-      "submitted": "2023-07-12"
+      "status": "Rejected",
+      "submitted": "2023-11-19T11:25:00",
+      "dateOfLoss": "2022"
     },
     {
       "referenceNumber": "TM9-3LJ-3SLT",
@@ -206,8 +223,9 @@ module.exports = {
       "postcode": "E18 E5",
       "dateOfBirth": "1992-10-31",
       "emailAddress": "aisha.patel@example.com",
-      "status": "Cancelled",
-      "submitted": "2023-07-02"
+      "status": "Failed",
+      "submitted": "2023-11-11T13:56:00",
+      "dateOfLoss": "2021"
     },
     {
       "referenceNumber": "9RP-ONZ-2EZ2",
@@ -217,8 +235,9 @@ module.exports = {
       "postcode": "SW11 A3",
       "dateOfBirth": "1992-01-03",
       "emailAddress": "maria.garcia@email.com",
-      "status": "Expired",
-      "submitted": "2023-06-27"
+      "status": "Failed",
+      "submitted": "2023-11-14T14:02:00",
+      "dateOfLoss": "2022"
     },
     {
       "referenceNumber": "H26-Y65-4SY9",
@@ -228,8 +247,9 @@ module.exports = {
       "postcode": "N19 A4",
       "dateOfBirth": "1985-05-24",
       "emailAddress": "marcus.williams@email.com",
-      "status": "Expired",
-      "submitted": "2023-06-21"
+      "status": "Incomplete",
+      "submitted": "2023-11-15T10:52:00",
+      "dateOfLoss": "2021"
     },
     {
       "referenceNumber": "BZ8-QI7-YKHN",
@@ -239,8 +259,9 @@ module.exports = {
       "postcode": "SE19 B2",
       "dateOfBirth": "1994-05-26",
       "emailAddress": "fatima.ahmed@example.com",
-      "status": "Expired",
-      "submitted": "2023-06-19"
+      "status": "Incomplete",
+      "submitted": "2023-11-17T20:58:00",
+      "dateOfLoss": "2020"
     },
     {
       "referenceNumber": "SWT-QS9-L89K",
@@ -250,8 +271,9 @@ module.exports = {
       "postcode": "M16 D7",
       "dateOfBirth": "1953-04-11",
       "emailAddress": "jasmine.johnson@mail.com",
-      "status": "Cancelled",
-      "submitted": "2023-06-17"
+      "status": "Incomplete",
+      "submitted": "2023-11-13T10:47:00",
+      "dateOfLoss": "2020"
     },
     {
       "referenceNumber": "Y5F-RMJ-E4H0",
@@ -261,8 +283,9 @@ module.exports = {
       "postcode": "E13 E7",
       "dateOfBirth": "1961-09-18",
       "emailAddress": "fatima.ahmed@mail.com",
-      "status": "Cancelled",
-      "submitted": "2023-06-15"
+      "status": "Rejected",
+      "submitted": "2023-11-19T09:11:00",
+      "dateOfLoss": "2018"
     },
     {
       "referenceNumber": "86E-VI9-5F0R",
@@ -272,8 +295,9 @@ module.exports = {
       "postcode": "L13 B7",
       "dateOfBirth": "1986-08-04",
       "emailAddress": "jasmine.williams@inbox.com",
-      "status": "Cancelled",
-      "submitted": "2023-06-14"
+      "status": "Rejected",
+      "submitted": "2023-11-19T21:45:00",
+      "dateOfLoss": "2022"
     },
     {
       "referenceNumber": "5F9-OI7-OA6N",
@@ -283,8 +307,9 @@ module.exports = {
       "postcode": "W17 A1",
       "dateOfBirth": "1991-02-11",
       "emailAddress": "aisha.khan@mail.com",
-      "status": "Cancelled",
-      "submitted": "2023-06-12"
+      "status": "Failed",
+      "submitted": "2023-11-22T20:11:00",
+      "dateOfLoss": "2020"
     },
     {
       "referenceNumber": "GL9-96Y-DCN6",
@@ -294,8 +319,9 @@ module.exports = {
       "postcode": "NW13 A8",
       "dateOfBirth": "1949-01-19",
       "emailAddress": "fatima.ahmed@example.com",
-      "status": "Expired",
-      "submitted": "2023-06-11"
+      "status": "Failed",
+      "submitted": "2023-11-20T21:17:00",
+      "dateOfLoss": "2023"
     },
     {
       "referenceNumber": "J6J-3HU-MAKQ",
@@ -305,8 +331,9 @@ module.exports = {
       "postcode": "EC13 D8",
       "dateOfBirth": "1986-11-20",
       "emailAddress": "jose.garcia@mail.com",
-      "status": "Cancelled",
-      "submitted": "2023-06-09"
+      "status": "Expired",
+      "submitted": "2023-11-13T17:29:00",
+      "dateOfLoss": "2023"
     },
     {
       "referenceNumber": "Q3F-ZKI-DEDE",
@@ -316,8 +343,9 @@ module.exports = {
       "postcode": "M17 E3",
       "dateOfBirth": "1967-02-27",
       "emailAddress": "emily.smith@example.com",
-      "status": "Expired",
-      "submitted": "2023-05-10"
+      "status": "Incomplete",
+      "submitted": "2023-11-21T15:58:00",
+      "dateOfLoss": "2023"
     },
     {
       "referenceNumber": "1M3-2QF-0QRG",
@@ -327,8 +355,9 @@ module.exports = {
       "postcode": "W15 E4",
       "dateOfBirth": "1955-09-01",
       "emailAddress": "maria.garcia@mail.com",
-      "status": "Cancelled",
-      "submitted": "2023-05-05"
+      "status": "Rejected",
+      "submitted": "2023-11-14T17:22:00",
+      "dateOfLoss": "2022"
     },
     {
       "referenceNumber": "OTY-MH7-3019",
@@ -338,8 +367,9 @@ module.exports = {
       "postcode": "WC19 A9",
       "dateOfBirth": "1985-09-26",
       "emailAddress": "aisha.patel@email.com",
-      "status": "Expired",
-      "submitted": "2023-05-02"
+      "status": "Incomplete",
+      "submitted": "2023-11-19T09:08:00",
+      "dateOfLoss": "2018"
     },
     {
       "referenceNumber": "42J-65K-F4E7",
@@ -349,8 +379,9 @@ module.exports = {
       "postcode": "WC17 D3",
       "dateOfBirth": "2000-10-04",
       "emailAddress": "emily.smith@example.com",
-      "status": "Expired",
-      "submitted": "2023-04-26"
+      "status": "Sent",
+      "submitted": "2023-11-08T15:07:00",
+      "dateOfLoss": "2023"
     },
     {
       "referenceNumber": "O9H-3Y6-HXRB",
@@ -360,8 +391,9 @@ module.exports = {
       "postcode": "N17 A6",
       "dateOfBirth": "1952-12-22",
       "emailAddress": "oliver.smith@inbox.com",
-      "status": "Expired",
-      "submitted": "2023-04-23"
+      "status": "Incomplete",
+      "submitted": "2023-11-16T20:22:00",
+      "dateOfLoss": "2018"
     },
     {
       "referenceNumber": "LFV-X7P-RYGO",
@@ -371,8 +403,9 @@ module.exports = {
       "postcode": "W18 D8",
       "dateOfBirth": "1941-06-07",
       "emailAddress": "zhang.chen@example.com",
-      "status": "Cancelled",
-      "submitted": "2023-04-06"
+      "status": "Rejected",
+      "submitted": "2023-11-19T13:05:00",
+      "dateOfLoss": "2020"
     },
     {
       "referenceNumber": "EY9-BR9-3133",
@@ -382,8 +415,9 @@ module.exports = {
       "postcode": "W13 B6",
       "dateOfBirth": "2002-09-14",
       "emailAddress": "maria.martinez@example.com",
-      "status": "Cancelled",
-      "submitted": "2023-04-02"
+      "status": "Incomplete",
+      "submitted": "2023-11-17T19:48:00",
+      "dateOfLoss": "2018"
     },
     {
       "referenceNumber": "VXA-NRP-C7ZV",
@@ -394,7 +428,8 @@ module.exports = {
       "dateOfBirth": "1943-06-17",
       "emailAddress": "emily.smith@inbox.com",
       "status": "Expired",
-      "submitted": "2023-03-29"
+      "submitted": "2023-11-13T10:32:00",
+      "dateOfLoss": "2021"
     },
     {
       "referenceNumber": "Q41-FCG-LGJY",
@@ -404,8 +439,9 @@ module.exports = {
       "postcode": "W12 C4",
       "dateOfBirth": "1975-07-08",
       "emailAddress": "emily.jones@example.com",
-      "status": "Expired",
-      "submitted": "2023-03-17"
+      "status": "Incomplete",
+      "submitted": "2023-11-11T12:42:00",
+      "dateOfLoss": "2023"
     },
     {
       "referenceNumber": "Y5P-KNB-Y810",
@@ -415,8 +451,9 @@ module.exports = {
       "postcode": "W17 B7",
       "dateOfBirth": "1991-06-29",
       "emailAddress": "zhang.wang@example.com",
-      "status": "Cancelled",
-      "submitted": "2023-03-02"
+      "status": "Rejected",
+      "submitted": "2023-11-15T14:55:00",
+      "dateOfLoss": "2022"
     },
     {
       "referenceNumber": "ZUR-80N-TD4A",
@@ -426,8 +463,9 @@ module.exports = {
       "postcode": "WC19 E6",
       "dateOfBirth": "1976-07-24",
       "emailAddress": "li.chen@inbox.com",
-      "status": "Cancelled",
-      "submitted": "2023-02-25"
+      "status": "Rejected",
+      "submitted": "2023-11-14T17:06:00",
+      "dateOfLoss": "2018"
     },
     {
       "referenceNumber": "PXV-R01-L3D5",
@@ -437,8 +475,9 @@ module.exports = {
       "postcode": "EC15 E3",
       "dateOfBirth": "1940-09-18",
       "emailAddress": "marcus.johnson@inbox.com",
-      "status": "Cancelled",
-      "submitted": "2023-02-18"
+      "status": "Expired",
+      "submitted": "2023-11-10T16:08:00",
+      "dateOfLoss": "2022"
     },
     {
       "referenceNumber": "ZE2-W0T-6NDJ",
@@ -448,8 +487,9 @@ module.exports = {
       "postcode": "L13 B6",
       "dateOfBirth": "1972-11-21",
       "emailAddress": "zhang.wang@mail.com",
-      "status": "Expired",
-      "submitted": "2023-02-12"
+      "status": "Incomplete",
+      "submitted": "2023-11-11T17:48:00",
+      "dateOfLoss": "2018"
     },
     {
       "referenceNumber": "6HB-7PB-1HXP",
@@ -459,8 +499,9 @@ module.exports = {
       "postcode": "N18 A8",
       "dateOfBirth": "1986-06-05",
       "emailAddress": "emily.smith@mail.com",
-      "status": "Expired",
-      "submitted": "2023-01-31"
+      "status": "Failed",
+      "submitted": "2023-11-20T11:25:00",
+      "dateOfLoss": "2022"
     },
     {
       "referenceNumber": "AIP-HQB-6057",
@@ -470,8 +511,9 @@ module.exports = {
       "postcode": "WC11 C9",
       "dateOfBirth": "1957-01-16",
       "emailAddress": "aisha.patel@example.com",
-      "status": "Expired",
-      "submitted": "2023-01-21"
+      "status": "Sent",
+      "submitted": "2023-11-12T16:49:00",
+      "dateOfLoss": "2019"
     },
     {
       "referenceNumber": "QOX-GBB-J4PK",
@@ -481,8 +523,9 @@ module.exports = {
       "postcode": "SW18 D4",
       "dateOfBirth": "1987-02-19",
       "emailAddress": "li.wang@example.com",
-      "status": "Expired",
-      "submitted": "2023-01-20"
+      "status": "Sent",
+      "submitted": "2023-11-14T09:04:00",
+      "dateOfLoss": "2019"
     },
     {
       "referenceNumber": "EXO-1LE-YB7E",
@@ -492,8 +535,9 @@ module.exports = {
       "postcode": "N14 D6",
       "dateOfBirth": "1965-03-20",
       "emailAddress": "jose.garcia@example.com",
-      "status": "Expired",
-      "submitted": "2023-01-05"
+      "status": "Failed",
+      "submitted": "2023-11-15T18:24:00",
+      "dateOfLoss": "2021"
     },
     {
       "referenceNumber": "1YE-JP1-4T19",
@@ -503,8 +547,9 @@ module.exports = {
       "postcode": "NW12 B5",
       "dateOfBirth": "1994-09-30",
       "emailAddress": "jasmine.williams@mail.com",
-      "status": "Expired",
-      "submitted": "2022-12-15"
+      "status": "Rejected",
+      "submitted": "2023-11-20T09:30:00",
+      "dateOfLoss": "2022"
     },
     {
       "referenceNumber": "SGV-RDB-4RBN",
@@ -514,8 +559,9 @@ module.exports = {
       "postcode": "WC18 A1",
       "dateOfBirth": "1954-05-17",
       "emailAddress": "oliver.jones@inbox.com",
-      "status": "Cancelled",
-      "submitted": "2022-12-11"
+      "status": "Incomplete",
+      "submitted": "2023-11-15T16:46:00",
+      "dateOfLoss": "2019"
     },
     {
       "referenceNumber": "N3K-AV7-BBER",
@@ -525,8 +571,9 @@ module.exports = {
       "postcode": "WC17 D1",
       "dateOfBirth": "1969-11-13",
       "emailAddress": "jose.garcia@email.com",
-      "status": "Cancelled",
-      "submitted": "2022-12-02"
+      "status": "Failed",
+      "submitted": "2023-11-12T09:19:00",
+      "dateOfLoss": "2018"
     },
     {
       "referenceNumber": "VAF-VR8-XUR6",
@@ -536,8 +583,9 @@ module.exports = {
       "postcode": "SW17 D5",
       "dateOfBirth": "1965-06-07",
       "emailAddress": "emily.smith@mail.com",
-      "status": "Cancelled",
-      "submitted": "2022-11-30"
+      "status": "Expired",
+      "submitted": "2023-11-10T14:48:00",
+      "dateOfLoss": "2022"
     },
     {
       "referenceNumber": "27A-3D2-YAU9",
@@ -547,8 +595,9 @@ module.exports = {
       "postcode": "EC19 B9",
       "dateOfBirth": "1994-07-15",
       "emailAddress": "li.chen@mail.com",
-      "status": "Cancelled",
-      "submitted": "2022-11-22"
+      "status": "Incomplete",
+      "submitted": "2023-11-21T11:05:00",
+      "dateOfLoss": "2021"
     }
   ]
 }
