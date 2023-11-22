@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+  {% include 'v2/includes/header' %}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back to search",
+    href: "start"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+{% if data['results'].length === 1 %}
+<h1 class="govuk-heading-l tag-">Search result</h1>
+<p class="govuk-!-margin-bottom-6">Result for <strong>{{ data['search-term'] }}</strong></p>
+{% elif data['results'].length === 0 %}
+<h1 class="govuk-heading-l tag-">Search results ({{ data['results'].length }})</h1>
+<p>No results were found for your search.</p>
+<p class="govuk-!-margin-bottom-6"><strong>Please note:</strong> Records of applications are only kept for 12 months.</p>
+{% else %}
+<h1 class="govuk-heading-l tag-">Search results ({{ data['results'].length }})</h1>
+<p class="govuk-!-margin-bottom-6">Results for <strong>{{ data['search-term'] }}</strong></p>
+{% endif %}
+
+{% if data['results'].length >0 %}
+
+<div class="search-card__container">
+
+  {# loop through all the priority categories  #}
+  {% for i in range(0, data['results'].length) -%}
+
+  <div class="search-card">
+
+    <div class="search-card__name">
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-1"> {{ data['applications'][data['results'][i]].lastName }}, {{ data['applications'][data['results'][i]].firstName }}</h2>
+
+      <p class="govuk-!-font-size-16 govuk-!-margin-bottom-3">{{ data['applications'][data['results'][i]].address }}</p>
+      <p class="govuk-!-font-size-16 govuk-!-margin-bottom-1">DOB: {{ data['applications'][data['results'][i]].dateOfBirth | govukDate("truncate") }}</p>
+      <p class="govuk-!-font-size-16">Email: {{ data['applications'][data['results'][i]].emailAddress }}</p>
+    </div>
+
+    <div class="search-card__address">
+      <p class="govuk-!-margin-bottom-3">Reference number: <strong>{{ data['applications'][data['results'][i]].referenceNumber }}</strong></p>
+      <p class="govuk-!-margin-bottom-1">Year of loss: {{ data['applications'][data['results'][i]].dateOfLoss }}</p>
+    </div>
+
+    <div class="search-card__status">
+      {{ data['applications'][data['results'][i]].status | tag | safe }}<br>
+      <p class="govuk-!-font-size-14 govuk-!-margin-top-2">Submitted:<br> {{ data['applications'][data['results'][i]].submitted | govukDate }}<br>{{ data['applications'][data['results'][i]].submitted | govukTime }}</p>
+    </div>
+
+  </div>
+  {%- endfor %}
+  </div>
+
+{% endif %}
+
+{% endblock %}

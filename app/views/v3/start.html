@@ -1,0 +1,112 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+  {% include 'v2/includes/header' %}
+{% endblock %}
+
+{% block content %}
+
+  <h1 class="govuk-heading-l">Find an application</h1>
+
+
+    <form action="get-results" method="post" autocomplete="off">
+
+      {% call govukFieldset({
+        legend: {
+          text: "Search using at least 1 field",
+          classes: "govuk-fieldset__legend--m"
+        }
+      }) %}
+
+      {{ govukInput({
+        label: {
+          text: "Reference number"
+        },
+        classes: "govuk-input--width-10 govuk-input--extra-letter-spacing",
+        id: "reference-number",
+        name: "reference-number",
+        spellcheck: false
+      }) }}
+
+      {{ govukInput({
+        label: {
+          text: "First name"
+        },
+        classes: "govuk-input--width-20 govuk-input--extra-letter-spacing",
+        id: "first-name",
+        name: "first-name",
+        spellcheck: false
+      }) }}
+
+      {{ govukInput({
+        label: {
+          text: "Last name"
+        },
+        classes: "govuk-input--width-20 govuk-input--extra-letter-spacing",
+        id: "last-name",
+        name: "last-name",
+        spellcheck: false
+      }) }}
+
+      {{ govukInput({
+        label: {
+          text: "Email"
+        },
+        classes: "govuk-input--width-20 govuk-input--extra-letter-spacing",
+        id: "email",
+        name: "email",
+        spellcheck: false
+      }) }}
+
+      {{ govukDateInput({
+        id: "dob",
+        namePrefix: "[date-of-birth]",
+        fieldset: {
+          legend: {
+            text: "Date of birth"
+          }
+        },
+        hint: {
+          text: "For example, 31 3 1980"
+        },
+        items: [
+          {
+            name: "day",
+            classes: "govuk-input--width-2",
+            autocomplete: "bday-day"
+          },
+          {
+            name: "month",
+            classes: "govuk-input--width-2",
+            autocomplete: "bday-month"
+          },
+          {
+            name: "year",
+            classes: "govuk-input--width-4",
+            autocomplete: "bday-year"
+          }
+        ]
+      }) }}
+
+      {{ govukInput({
+        label: {
+          text: "Postcode"
+        },
+        classes: "govuk-input--width-10",
+        id: "search-postcode",
+        name: "search-postcode"
+      }) }}
+
+    {% endcall %}
+
+    {{ govukButton({
+    text: "Search",
+    classes: "govuk-!-margin-top-0"
+    }) }}
+
+    </form>
+  </div>
+
+</div>
+        
+{% endblock %}
