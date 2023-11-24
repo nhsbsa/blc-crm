@@ -9,9 +9,13 @@ addFilter('uppercase', function (content) {
 addFilter('tag', function (content) {
   let colour = 'grey'
   if (content === 'Incomplete') {
-    colour = 'green'
+    colour = 'blue'
   } else if (content === 'Sent') {
-    colour = 'orange'
+    colour = 'green'
+  } else if (content === 'Rejected' || content === 'Failed') {
+    colour = 'red'
+  } else if (content === 'Expired') {
+    colour = 'red'
   }
   let tagCode = '<strong class="govuk-tag govuk-tag--'+ colour +'">' + content + '</strong>'
   return tagCode
