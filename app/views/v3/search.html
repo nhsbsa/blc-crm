@@ -1,12 +1,18 @@
 {% extends "layouts/main.html" %}
 
+{% set heading = "Find an application" %}
+
+{% block pageTitle %}
+{{ heading }} – {{ serviceName }} – NHSBSA
+{% endblock %}
+
 {% block header %}
-  {% include 'v2/includes/header' %}
+  {% include 'v3/includes/header' %}
 {% endblock %}
 
 {% block content %}
 
-  <h1 class="govuk-heading-l">Find an application</h1>
+  <h1 class="govuk-heading-l">{{ heading }}</h1>
 
 
     <form action="get-results" method="post" autocomplete="off">
