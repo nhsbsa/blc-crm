@@ -44,7 +44,7 @@ module.exports = {
       "postcode": "SW12 D9",
       "dateOfBirth": "1984-05-13",
       "emailAddress": "ali.hassan@mail.com",
-      "status": "Rejected",
+      "status": "Sent",
       "submitted": "2023-11-19T21:33:00",
       "dateOfLoss": "2022"
     },
@@ -56,7 +56,7 @@ module.exports = {
       "postcode": "M18 B8",
       "dateOfBirth": "1982-06-17",
       "emailAddress": "jasmine.williams@example.com",
-      "status": "Rejected",
+      "status": "Failed",
       "submitted": "2023-11-08T19:58:00",
       "dateOfLoss": "2020"
     },
