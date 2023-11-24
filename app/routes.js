@@ -16,6 +16,20 @@ router.use((req, res, next) => {
 // V3 prototype
 
 // Add your routes here
+
+// start page choice
+router.post("/v3/start-choice", function (req, res) {
+  // grab choice
+  let choice = req.session.data['start-choice']
+  if (choice === 'status'){
+    res.redirect('/v3/search')
+  } else if (choice === 'request'){
+    res.redirect('/v3/request')
+  } else if (choice === 'request2'){
+    res.redirect('/v3/request2')
+  }
+});
+
 router.post("/v3/get-results", function (req, res) {
   // grab search type
   let type = []
