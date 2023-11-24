@@ -1,0 +1,149 @@
+.govuk-card {
+  margin-bottom: 40px;
+  background: #fff;
+  border: 1px solid #d8dde0;
+  position: relative;
+  width:100%
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-card {
+    margin-bottom:48px
+  }
+}
+
+.govuk-card__img {
+  border-bottom: 1px solid #f0f4f5;
+  display: block;
+  width:100%
+}
+
+@media print {
+  .govuk-card__img {
+    display:none
+  }
+}
+
+.govuk-card__content {
+  padding:24px
+}
+
+.govuk-card__content > * :first-child {
+  margin-top:0
+}
+
+.govuk-card__content > * :last-child {
+  margin-bottom:0
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-card__content {
+    padding:32px
+  }
+}
+
+.govuk-card__heading, .govuk-card__metadata, .govuk-card__description {
+  margin-bottom:16px
+}
+
+.govuk-card--clickable {
+  border-bottom-width:4px
+}
+
+.govuk-card__link {
+  color: #1d70b8 !important;
+}
+
+.govuk-card--clickable .govuk-card__heading a::before, .govuk-card--clickable .govuk-card__link::before {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top:0
+}
+
+.govuk-card--clickable:active {
+  border-color: #aeb7bd;
+  bottom:-1px
+}
+
+.govuk-card-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  padding:0
+}
+
+@media (max-width: 48.0525em) {
+  .govuk-card-group {
+    margin-bottom:40px
+  }
+}
+
+.govuk-card-group + h2, .govuk-card-group + .govuk-heading-l, .govuk-card-group + h3, .govuk-card-group + .govuk-heading-m {
+  padding-top:0
+}
+
+.govuk-card-group__item {
+  display: flex;
+  list-style-type: none;
+  margin-bottom:0
+}
+
+@media (max-width: 48.0525em) {
+  .govuk-card-group__item {
+    flex:0 0 100%
+  }
+}
+
+.govuk-card-group__item .govuk-card {
+  margin-bottom:32px
+}
+
+@media (max-width: 48.0525em) {
+  .govuk-card-group__item .govuk-card {
+    margin-bottom:16px
+  }
+
+  .govuk-card-group__item:last-child .govuk-card {
+    margin-bottom:0
+  }
+}
+
+.govuk-card--feature {
+  margin-top:40px
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-card--feature {
+    margin-top:48px
+  }
+}
+
+.govuk-card__heading--feature {
+  background: #005eb8;
+  color: #fff;
+  display: inline-block;
+  left: -25px;
+  margin-bottom: 8px;
+  margin-right: -24px;
+  padding: 8px 24px;
+  position: relative;
+  top:-8px
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-card__heading--feature {
+    left: -33px;
+    margin-right: -32px;
+    padding: 8px 32px;
+    top:-16px
+  }
+}
+
+.govuk-card__content--feature {
+  padding-top:0 !important
+}
