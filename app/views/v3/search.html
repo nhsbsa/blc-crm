@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% set heading = "Find an application" %}
+{% set heading = "Check the status of a certificate request" %}
 
 {% block pageTitle %}
 {{ heading }} – {{ serviceName }} – NHSBSA
@@ -19,7 +19,7 @@
 
       {% call govukFieldset({
         legend: {
-          text: "Search using at least 1 field",
+          text: "Use at least 1 field to search",
           classes: "govuk-fieldset__legend--m"
         }
       }) %}
@@ -73,7 +73,7 @@
           }
         },
         hint: {
-          text: "For example, 31 3 1980"
+          text: "For example, 27 3 2007"
         },
         items: [
           {
