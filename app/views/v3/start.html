@@ -12,39 +12,48 @@
 
 {% block content %}
 
-    <form action="start-choice" method="post" autocomplete="off">
+<h1 class="govuk-heading-l">{{ heading }}</h1>
 
-      {{ govukRadios({
-        name: "start-choice",
-        fieldset: {
-          legend: {
-            text: heading,
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--l govuk-!-margin-bottom-6"
-          }
-        },
+  <ul class="govuk-grid-row govuk-card-group">
+    <li class="govuk-grid-column-one-third govuk-card-group__item">
 
-          items: [
-          {
-            value: "request",
-            text: "Request a baby loss certificate (For parent 1)"
-          },
-          {
-            value: "request2",
-            text: "Request a baby loss certificate (For parent 2)"
-          },
-          {
-            value: "status",
-            text: "Check the status of an application"
-          }
-        ]
-      }) }}
+      <div class="govuk-card govuk-card--clickable">
+        <div class="govuk-card__content">
+          <h5 class="govuk-card__heading govuk-heading-m">
+            <a class="govuk-card__link" href="request">Request a baby loss certificate <br>(for parent 1)</a>
+          </h5>
 
-    {{ govukButton({
-    text: "Search",
-    classes: "govuk-!-margin-top-0"
-    }) }}
+        </div>
+      </div>
 
-    </form>
+    </li>
+
+    <li class="govuk-grid-column-one-third govuk-card-group__item">
+
+      <div class="govuk-card govuk-card--clickable">
+        <div class="govuk-card__content">
+          <h5 class="govuk-card__heading govuk-heading-m">
+            <a class="govuk-card__link" href="request2">Request a baby loss certificate <br>(for parent 2)</a>
+          </h5>
+
+        </div>
+      </div>
+
+    </li>
+
+    <li class="govuk-grid-column-one-third govuk-card-group__item">
+
+      <div class="govuk-card govuk-card--clickable">
+        <div class="govuk-card__content">
+          <h5 class="govuk-card__heading govuk-heading-m">
+            <a class="govuk-card__link" href="search">Check the status of a certificate request</a>
+          </h5>
+
+        </div>
+      </div>
+
+    </li>
+  </ul>
+
 
 {% endblock %}
