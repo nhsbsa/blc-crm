@@ -49,6 +49,15 @@ router.post("/v3/get-results", function (req, res) {
   if (req.session.data['date-of-birth'][2]){
     type.push('dob')
   }
+  if (req.session.data['first-name']){
+    type.push('firstname')
+  }
+  if (req.session.data['last-name']){
+    type.push('lastname')
+  }
+  if (req.session.data['email'][2]){
+    type.push('email')
+  }
 
   if (type.includes('refnum')) {
     console.log('searching ref number...')
@@ -58,6 +67,19 @@ router.post("/v3/get-results", function (req, res) {
       if (applications[i].referenceNumber) {
         // we then pass all of the matches
         if (applications[i].referenceNumber === term) {
+          results.push(i)
+        }
+      }
+    }
+  }
+  else if (type.includes('lastname')) {
+    console.log('searching last name...')
+    term = req.session.data['last-name']
+    for (i = 0; i < applications.length; i++) {
+      // avoid issues if we check if it's empty first
+      if (applications[i].lastName) {
+        // we then pass all of the matches
+        if (applications[i].lastName === term) {
           results.push(i)
         }
       }
