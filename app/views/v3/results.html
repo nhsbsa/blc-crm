@@ -13,15 +13,17 @@
 
 {% block content %}
 
+<h1 class="govuk-heading-l tag-">Search results</h1>
+
 {% if data['results'].length === 1 %}
-<h1 class="govuk-heading-l tag-">Search result</h1>
-<p class="govuk-!-margin-bottom-6">Result for <strong>{{ data['search-term'] }}</strong></p>
+<!--<h1 class="govuk-heading-l tag-">Search result</h1>-->
+<p class="govuk-!-margin-bottom-6">Results for <strong>{{ data['search-term'] }}</strong></p>
 {% elif data['results'].length === 0 %}
-<h1 class="govuk-heading-l tag-">Search results ({{ data['results'].length }})</h1>
+<!--<h1 class="govuk-heading-l tag-">Search results ({{ data['results'].length }})</h1>-->
 <p>No results were found for <strong>{{ data['search-term'] }}</strong>.</p>
 <p class="govuk-!-margin-bottom-6"><strong>Please note:</strong> <br>Data is anonymised after 3 months. After 12 months it is deleted.</p>
 {% else %}
-<h1 class="govuk-heading-l tag-">Search results ({{ data['results'].length }})</h1>
+<!--<h1 class="govuk-heading-l tag-">Search results ({{ data['results'].length }})</h1>-->
 <p class="govuk-!-margin-bottom-6">Results for <strong>{{ data['search-term'] }}</strong></p>
 {% endif %}
 
