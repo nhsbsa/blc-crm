@@ -1,67 +1,29 @@
-<header class="cross-service-header" role="banner" data-module="one-login-header">
-  <div class="one-login-header toggle-enabled" data-one-login-header-nav="">
-    <div class="one-login-header__container govuk-width-container">
-      <div class="one-login-header__logo">
-        <a href="/" class="one-login-header__link one-login-header__link--homepage">
-          <span class="one-login-header__logotype">
-            <span>
-              GOV.UK
-            </span>
-          </span>
-        </a>
-      </div>
-      <nav aria-label="GOV.UK One Login menu" class="one-login-header__nav" data-open-class="one-login-header__nav--open" id="one-login-header__nav">
-        <ul class="one-login-header__nav__list">
-          <li class="one-login-header__nav__list-item">
-            <a class="one-login-header__nav__link" href="start">
-              Sign out
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
 
-  <!-- Start of service navigation -->
-  <div class="service-header toggle-enabled" data-one-login-header-nav="">
-    <div class="govuk-width-container">
-      <div class="service-header__container">
-        <!-- The name of your service goes here -->
-        <h2 class="service-header__heading">BLC certificate manager</h2>
-        <div>
-          <!-- Important! Label your navigation appropriately! When there are multiple navigation landmarks on a page, additional labelling is required to provide support for screen reader users -->
-          <nav aria-label="Name of example service menu">
-            <ul class="service-header__nav-list service-header__nav" id="service-header__nav" data-open-class="service-header__nav--open">
-              <!-- Use the "service-header__nav-list-item--active" modifier class on the li to visually highlight the page the user is currently viewing -->
-              <li class="service-header__nav-list-item ">
-                <!-- Use the aria-current="page" attribute on the anchor tag -->
-                <a class="service-header__nav-list-item-link" href="start">
-                  Home
-                </a>
-              </li>
-              <li class="service-header__nav-list-item ">
-                <!-- Use the aria-current="page" attribute on the anchor tag -->
-                <a class="service-header__nav-list-item-link" href="request">
-                  Request (P1)
-                </a>
-              </li>
-              <li class="service-header__nav-list-item ">
-                <!-- Use the aria-current="page" attribute on the anchor tag -->
-                <a class="service-header__nav-list-item-link" href="request2">
-                  Request (P2)
-                </a>
-              </li>
-              <li class="service-header__nav-list-item ">
-                <!-- Use the aria-current="page" attribute on the anchor tag -->
-                <a class="service-header__nav-list-item-link" href="search">
-                  Search
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End of service navigation -->
-</header>
+{{ govukHeader({
+  homepageUrl: "/index",
+  serviceName: "BLC certificate manager",
+  serviceUrl: "start",
+  navigation: [
+    {
+      href: "start",
+      text: "Home",
+      active: true
+    },
+    {
+      href: "request",
+      text: "Request (P1)"
+    },
+    {
+      href: "request2",
+      text: "Request (P2)"
+    },
+    {
+      href: "search",
+      text: "Search"
+    },
+    {
+      href: "start",
+      text: "Sign out"
+    }
+  ]
+}) }}

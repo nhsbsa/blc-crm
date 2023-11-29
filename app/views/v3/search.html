@@ -7,7 +7,34 @@
 {% endblock %}
 
 {% block header %}
-  {% include 'v3/includes/header' %}
+  {{ govukHeader({
+    homepageUrl: "/index",
+    serviceName: "BLC certificate manager",
+    serviceUrl: "start",
+    navigation: [
+    {
+      href: "start",
+      text: "Home"
+      },
+      {
+        href: "request",
+        text: "Request (P1)"
+      },
+      {
+        href: "request2",
+        text: "Request (P2)"
+      },
+      {
+        href: "search",
+        text: "Search",
+        active: true
+      },
+      {
+        href: "start",
+        text: "Sign out"
+      }
+    ]
+  }) }}
 {% endblock %}
 
 {% block content %}
