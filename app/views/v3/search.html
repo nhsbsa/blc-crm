@@ -58,6 +58,7 @@
         classes: "govuk-input--width-10 govuk-input--extra-letter-spacing",
         id: "reference-number",
         name: "reference-number",
+        value: referenceNumber,
         spellcheck: false
       }) }}
 
@@ -68,6 +69,7 @@
         classes: "govuk-input--width-20 govuk-input--extra-letter-spacing",
         id: "first-name",
         name: "first-name",
+        value: firstName,
         spellcheck: false
       }) }}
 
@@ -78,6 +80,7 @@
         classes: "govuk-input--width-20 govuk-input--extra-letter-spacing",
         id: "last-name",
         name: "last-name",
+        value: lastName,
         spellcheck: false
       }) }}
 
@@ -88,6 +91,7 @@
         classes: "govuk-input--width-20 govuk-input--extra-letter-spacing",
         id: "email",
         name: "email",
+        value: email,
         spellcheck: false
       }) }}
 
@@ -106,17 +110,20 @@
           {
             name: "day",
             classes: "govuk-input--width-2",
+            value: dobDay,
             autocomplete: "bday-day"
           },
           {
             name: "month",
             classes: "govuk-input--width-2",
-            autocomplete: "bday-month"
+            autocomplete: "bday-month",
+            value: dobMonth
           },
           {
             name: "year",
             classes: "govuk-input--width-4",
-            autocomplete: "bday-year"
+            autocomplete: "bday-year",
+            value: dobYear
           }
         ]
       }) }}
@@ -127,6 +134,7 @@
         },
         classes: "govuk-input--width-10",
         id: "search-postcode",
+        value: searchPostcode,
         name: "search-postcode"
       }) }}
 
@@ -135,6 +143,12 @@
     {{ govukButton({
     text: "Search",
     classes: "govuk-!-margin-top-0"
+    }) }}
+
+    {{ govukButton({
+      text: "Reset Form",
+      classes: "govuk-button--secondary govuk-!-margin-top-0",
+      href: "search?clear=true"
     }) }}
 
     </form>

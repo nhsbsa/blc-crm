@@ -17,6 +17,37 @@ router.use((req, res, next) => {
 
 // Add your routes here
 
+router.get('/v3/search', function (req, res) {
+  // check for clear
+  if (req.query.clear === 'true') {
+    req.session.data['reference-number'] = ''
+    req.session.data['first-name'] = ''
+    req.session.data['last-name'] = ''
+    req.session.data['email'] = ''
+    req.session.data['date-of-birth'] = []
+    req.session.data['search-postcode'] = ''
+  }
+  let referenceNumber = req.session.data['reference-number']
+  let firstName = req.session.data['first-name']
+  let lastName = req.session.data['last-name']
+  let email = req.session.data['email']
+  let dobDay = req.session.data['date-of-birth'][0]
+  let dobMonth = req.session.data['date-of-birth'][1]
+  let dobYear = req.session.data['date-of-birth'][2]
+  let searchPostcode = req.session.data['search-postcode']
+
+  return res.render('/v3/search', {
+    'referenceNumber': referenceNumber,
+    'firstName': firstName,
+    'lastName': lastName,
+    'email': email,
+    'dobDay': dobDay,
+    'dobMonth': dobMonth,
+    'dobYear': dobYear,
+    'searchPostcode': searchPostcode
+  })
+})
+
 // start page choice
 router.post("/v3/start-choice", function (req, res) {
   // grab choice
