@@ -27,14 +27,19 @@ router.get('/v3/search', function (req, res) {
     req.session.data['date-of-birth'] = []
     req.session.data['search-postcode'] = ''
   }
-  let referenceNumber = req.session.data['reference-number']
-  let firstName = req.session.data['first-name']
-  let lastName = req.session.data['last-name']
-  let email = req.session.data['email']
-  let dobDay = req.session.data['date-of-birth'][0]
-  let dobMonth = req.session.data['date-of-birth'][1]
-  let dobYear = req.session.data['date-of-birth'][2]
-  let searchPostcode = req.session.data['search-postcode']
+  let referenceNumber = req.session.data['reference-number'] || ''
+  let firstName = req.session.data['first-name'] || ''
+  let lastName = req.session.data['last-name'] || ''
+  let email = req.session.data['email'] || ''
+  let dobDay = ''
+  let dobMonth = ''
+  let dobYear = ''
+  if (req.session.data['date-of-birth'][0]) {
+    dobDay = req.session.data['date-of-birth'][0] || ''
+    dobMonth = req.session.data['date-of-birth'][1] || ''
+    dobYear = req.session.data['date-of-birth'][2] || ''
+  }
+  let searchPostcode = req.session.data['search-postcode'] || ''
 
   return res.render('/v3/search', {
     'referenceNumber': referenceNumber,
