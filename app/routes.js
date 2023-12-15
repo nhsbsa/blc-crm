@@ -34,7 +34,7 @@ router.get('/v3/search', function (req, res) {
   let dobDay = ''
   let dobMonth = ''
   let dobYear = ''
-  if (req.session.data['date-of-birth'][0]) {
+  if (req.session.data['date-of-birth']) {
     dobDay = req.session.data['date-of-birth'][0] || ''
     dobMonth = req.session.data['date-of-birth'][1] || ''
     dobYear = req.session.data['date-of-birth'][2] || ''
