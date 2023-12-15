@@ -104,8 +104,9 @@
 <textarea rows="8" id="copyText-{{ i }}" style="display:none; min-width: 20em;">
 Reference number: {{ data['applications'][data['results'][i]].referenceNumber }}
 Name: {{ data['applications'][data['results'][i]].firstName }} {{ data['applications'][data['results'][i]].lastName }}
-DOB: {{ data['applications'][data['results'][i]].dateOfBirth | govukDate("truncate") }}
+DOB: {{ data['applications'][data['results'][i]].dateOfBirth | changeDateFormat }}
 Email: {{ data['applications'][data['results'][i]].emailAddress }}
+Status: {{ data['applications'][data['results'][i]].status }}
 </textarea>
       <noscript>
         <style>
