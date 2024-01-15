@@ -1,0 +1,82 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container app-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  <div class="govuk-grid-column-two-thirds">
+<div class="govuk-form-group">
+  <span class="govuk-caption-l">Details on the certificate</span>
+  <fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  <h1 class="govuk-fieldset__heading">
+    What is their name?
+    
+  </h1>
+</legend>
+<div class="govuk-body">You must enter the names the other parent registered with their GP. If they've changed their name, they will need to contact their GP.</div>
+<div id="passport-issued-hint" class="govuk-hint">
+  This is the name that will be printed on the certificate.
+</div>
+
+      <form class="form" action="enter-parent-name" method="post">
+        
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="add-name">
+              First name
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="add-name" name="parent2-firstname" type="text">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="one-third">
+              Last name
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="add-name" name="parent2-lastname" type="text">
+          </div>
+        
+      </div>
+    </div>
+      
+</div>
+</div>
+{{ govukButton({
+  text: "Continue",
+  href: "parent-contact",
+  isStartButton: false
+  }) }}
+      </form>
+
+    </div>
+  </div>
+  <style>
+    
+    .govuk-grid-column-two-thirds {
+      padding-left: 0px;
+
+    }
+    
+    
+  </style>
+
+{% endblock %}

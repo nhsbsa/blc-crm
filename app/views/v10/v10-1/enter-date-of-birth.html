@@ -1,0 +1,98 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container app-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+  
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            What is your date of birth?
+          </h1>
+        </legend>
+        <form class="form" action="date-of-birth" method="post">
+        <div id="dob-enter" class="govuk-hint">
+          For example, 27 3 2007
+        </div>
+        
+          <div class="govuk-date-input" id="date-of-birth">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-of-birth">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth" name="dob-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="date-of-birth">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth" name="dob-month" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="date-of-birth">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-birth" name="dob-year" type="text" inputmode="numeric"> 1998
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  </div>
+  </div>
+  
+
+        <button class="govuk-button" data-module="govuk-button" type="submit">
+          Continue
+        </button>
+
+      </form>
+</div>
+    </div>
+  </div>
+  <style>
+  
+   
+    .govuk-radios {
+      margin-bottom: 30px;
+    }
+    .govuk-details {
+      margin-top: 30px;
+    }
+   
+    
+    
+  </style>
+
+{% endblock %}

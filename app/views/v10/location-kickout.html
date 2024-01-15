@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        We cannot provide a baby loss certificate because you can only use this service if your baby loss happened in England
+      </h1>
+
+      <p>If you live in Scotland, you can apply for an entry in the Memorial Book of Pregnancy and Baby Loss Prior to 24 Weeks.</p>
+      <p>Once the loss has been recorded in the Memorial Book, a commemorative certificate will be sent to the applicant free of charge.</p>
+      <h2 class="govuk-heading-m">Support organisations</h2>
+      
+      <h3 class="govuk-heading-m">Support organisations</h3>
+      <p>The following organisations give support and advice:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href=''>Sands</a></li>
+        <li><a href=''>Tommy's</a></li>
+        <li><a href="">Antenatal Results and Choices (ARC)</a></li>
+        <li><a href="">Saying Goodbye</a></li>
+        <li><a href="">The Miscarriage Association</a></li>
+        <li><a href="">Petals</a></li>
+        <li><a href="">NHS How to access mental health services</a></li>
+      </ul>
+    </div>
+  </div>
+
+{% endblock %}

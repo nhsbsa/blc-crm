@@ -1,0 +1,95 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container app-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  <div class="govuk-grid-column-two-thirds">
+<div class="govuk-form-group">
+  <span class="govuk-caption-l">Confirm your eligibility</span>
+  <fieldset class="govuk-fieldset">
+    
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  <h1 class="govuk-fieldset__heading">
+    Did your baby loss happen on or after 1 September 2018?
+  </h1>
+</legend>
+
+      <form class="form" action="loss-5-years" method="post">
+       
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="years-yes" name="years" type="radio" value="yes" data-aria-controls="conditional-contact">
+            <label class="govuk-label govuk-radios__label" for="contact">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="contact-by-email">
+               Enter year of baby loss
+                <div class="govuk-hint"> For example, 2021</div>
+                
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" name="year-loss" type="yes" spellcheck="false" autocomplete="email">
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="years-no" name="years" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="contact-2">
+              No
+            </label>
+          </div>
+         
+          </fieldset>
+        </div>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Why we're asking you this question
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            You can only get a certificate if you lost your baby on or after 1 September 2018.
+          </div>
+        </details>
+
+        <button class="govuk-button" data-module="govuk-button" type="submit">
+          Continue
+        </button>
+
+      </form>
+    </div>
+    </div>
+  </div>
+  <style>
+   
+    .govuk-fieldset__legend--l {
+      margin-bottom: 30px;
+    }
+    .govuk-radios {
+      margin-bottom: 30px;
+    }
+  </style>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+ 
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+        <div class="govuk-width-container">
+          <h1 class="govuk-heading-l">Declaration</h1>
+          
+          <p>I declare that the information I have provided is true and correct.</p>
+          <p>I certify that I have read, understood and agree to the  <a href="">Terms of Use and Privacy Policy</a>.</p>
+          <p>I consent to my personal information provided in this application to be used to verify my identity.</p>
+          <p>I acknowledge the ‘Certificate of Baby Loss Before 24 Weeks of Pregnancy’ I receive is not a legal document.</p>
+         
+          
+          <form action="/v10/confirmation-page" method="post" novalidate>
+            <div class="govuk-form-group">
+             
+             
+  
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                I agree and confirm
+              </label>
+            </div>
+          </div>
+          </div>
+         
+        </div>
+        {{ govukButton({
+          text: "I agree and continue",
+          href: "confirmation-page",
+          isStartButton: false
+          }) }}
+      
+          
+        </form>
+  </main>
+</div>
+<style>
+  .govuk-checkboxes {
+    margin-bottom: 20px;
+  }
+
+</style>
+{% endblock %}

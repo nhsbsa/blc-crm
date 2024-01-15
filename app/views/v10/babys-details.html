@@ -1,0 +1,81 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container app-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  <div class="govuk-grid-column-two-thirds">
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  <h1 class="govuk-fieldset__heading">
+    Your baby's details
+    
+  </h1>
+</legend>
+
+
+      <form class="form" action="parent-add" method="post">
+        <div class="govuk-form-group">
+
+          <p>The next four questions are about your baby. You can add these details to the certificate:</p>
+          
+
+     
+        
+       
+        <ul class="govuk-list govuk-list--bullet">
+          <li>date of baby loss</li>
+          <li>place of baby loss</li>
+          <li>baby's sex</li>
+          <li>baby's name</li>
+          
+          
+       
+      
+        </ul>
+
+        <p>If you choose not to answer these questions, the sections will be blank on the certificate</p>
+       
+      {{ govukButton({
+        text: "Continue",
+        href: "date-of-loss",
+        isStartButton: false
+        }) }}
+    
+</div>
+      
+</div>
+</div>
+    </div>
+  </div>
+  <style>
+  .govukButton {
+    margin-left: 15px;
+  }
+   
+  
+  </style>
+
+{% endblock %}

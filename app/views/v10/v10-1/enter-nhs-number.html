@@ -1,0 +1,76 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container app-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+  }) }}
+  {% endblock %}
+
+  {% block content %}
+  <div class="govuk-form-group">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            What is your NHS number?
+          </h1>
+        </legend>
+      </fieldset>
+
+        <form class="form" action="get-security-code" method="post">
+         
+            <div id="passport-issued-hint" class="govuk-hint">
+              Your NHS number is a 10 digit number that you find on any letter the NHS has sent you.
+            </div>
+            <div id="passport-issued-hint" class="govuk-hint">
+              For example, 485 777 3456
+            </div>
+
+            <input class="govuk-input govuk-input--width-10" id="nhs-number" name="nhs-number" type="text"
+              aria-describedby="nhs-number-hint" inputmode="numeric">
+
+          </div>
+         
+         </div>
+
+         {{ govukButton({
+          text: "Continue",
+          href: "check-your-details-copy",
+          isStartButton: false
+          }) }}
+    </form>
+   </div>
+
+</div>
+
+<style>
+  .govuk-button {
+    margin-left: 10px;
+  }
+</style>
+
+
+
+
+
+<style>
+ 
+</style>
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container app-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  <div class="govuk-grid-column-two-thirds">
+  <span class="govuk-caption-l">Details on the certificate</span>
+  <fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  <h1 class="govuk-fieldset__heading">
+    What is their relationship to your baby?
+    
+  </h1>
+</legend>
+
+      <form class="form" action="added-parent" method="post">
+        <div id="passport-issued-hint" class="govuk-hint">
+          This will be shown on the certificate.
+        </div>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="Biological mother" name="parent-2" type="radio" value="Biological mother">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+              Mother
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="Biological father" name="parent-2" type="radio" value="Biological father">
+            <label class="govuk-label govuk-radios__label" for="Biological father">
+              Father
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="Non biological father" name="parent-2" type="radio" value="Non biological father">
+            <label class="govuk-label govuk-radios__label" for="Non biological father">
+              Parent
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="Non biological mother" name="parent-2" type="radio" value="Non biological mother">
+            <label class="govuk-label govuk-radios__label" for="Non biological mother">
+              Surrogate
+            </label>
+          </div>
+          
+        
+          </div>
+
+        </div>
+      </fieldset>
+    </div>
+   
+                
+                
+           
+        
+
+        <button class="govuk-button" data-module="govuk-button" type="submit">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+  <style>
+    
+    .govuk-button {
+      margin-left: 10px;
+    }
+    .govuk-details {
+      margin-left:10px;
+    }
+  </style>
+{% endblock %}

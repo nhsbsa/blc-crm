@@ -1,0 +1,73 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container app-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+</div>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!--<h1 class="govuk-fieldset__heading">What's your name?</h1>-->
+
+      <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">Other parent's details</span>
+          What is the other parent's email address?
+      </h1>
+
+        
+
+      <p>If the other parent does not have an email address, you'll need to <a href="/beta/v10/contact">contact us</a>.</p>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="full-name">
+            Enter email address
+          </label>
+          <input class="govuk-input" id="full-name" name="full-name" type="text" autocomplete="name" spellcheck="false">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="full-name">
+            Confirm email address
+          </label>
+          <input class="govuk-input" id="full-name" name="full-name" type="text" autocomplete="name" spellcheck="false">
+        
+        </div>
+        <div class="govuk-inset-text">You must tell the other parent that they’ll be contacted.</div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other">
+          <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+            I agree and confirm
+          </label>
+        </div>
+        <br><br>
+        {{ govukButton({
+          text: "Continue",
+          href: "enter-date-of-birth-parent",
+          isStartButton: false
+          }) }}
+
+      
+
+    </div>
+  </div>
+{% endblock %}

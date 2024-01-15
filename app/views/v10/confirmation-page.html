@@ -1,0 +1,68 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Request pending",
+        html: "Your reference number<br><strong>J4R-8H5-2K9F1</strong>"
+      }) }}
+
+   
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+      
+      <p>The other parent will have 7 days to give permission and confirm their details.
+      </p>
+<p>They may choose not to be named on the certificate. If you would like a certificate with only your name as a parent of your baby, you'll need to start again.</p>
+     <p>If you've lost more than one pregnancy, you can <a href="">request another certificate</a>.</p>
+      <h3 class="govuk-heading-m">Support organisations</h3>
+      <p>The following organisations give support and advice:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="">NHS How to access mental health services</a></li>
+        <li><a href=''>Sands</a></li>
+        <li><a href=''>Tommy's</a></li>
+        <li><a href="">Antenatal Results and Choices (ARC)</a></li>
+        <li><a href="">Saying Goodbye</a></li>
+        <li><a href="">The Miscarriage Association</a></li>
+        <li><a href="">Petals</a></li>
+        
+        <li><a href="">Daddy's with Angels</a></li>
+      </ul>
+      <h3 class="govuk-heading-m">Contact a helpline</h3>
+      <p>These free helplines are there to help when you're feeling down or desperate.</p>
+      <p>Unless it says otherwise, they're open 24 hours a day, every day.</p>
+      <p>You can also call these helplines for advice if you're worried about someone else.</p>
+      <p>Samaritans – for everyone<br>
+        Call 116 123<br>
+        Email <br>
+        <a href="">jo@samaritans.org</a></p>
+        <p>Campaign Against Living Miserably (CALM)<br>
+          Call 0800 58 58 58 <br>5pm to midnight every day</p>
+          <p>Visit the webchat page.</p>
+
+
+<p>
+        <a href="#">
+          What did you think of this service?
+        </a> (takes 30 seconds)
+      </p>
+
+      
+      <p>
+        
+      </p>
+
+
+    </div>
+  </div>
+
+{% endblock %}

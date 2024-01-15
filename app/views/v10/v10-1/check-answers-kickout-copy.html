@@ -1,0 +1,75 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container app-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+ 
+{% endblock %}
+
+{% block content %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Are you sure you want to cancel the request for a certificate?
+    </h1>
+
+    <div class="govuk-body">If the details are not correct, the request for a certificate will be cancelled and the main applicant will need to start a new request.</div>
+    <form class="form" action="cya-kickout" method="post">
+        
+         
+      <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="cya-kickout" name="kickout" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="location-england-yes">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="cya-kickout" name="kickout" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="location-england-no">
+            No
+          </label>
+        </div>
+      </div>
+    
+   
+
+
+
+
+      <button class="govuk-button" data-module="govuk-button" type="submit">
+        Continue
+      </button>
+
+
+
+
+   </div>
+
+  </div>
+</div>
+  <style>
+    .govuk-fieldset__heading {
+      margin-bottom: 30px;
+    }
+    
+  </style>
+{% endblock %}

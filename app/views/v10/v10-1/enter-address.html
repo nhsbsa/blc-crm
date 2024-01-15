@@ -1,0 +1,80 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container app-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  <div class="govuk-grid-column-two-thirds">
+
+  
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          What is your postcode?
+        </h1>
+      </legend>
+      <p>You must enter the home postcode you registered with your GP surgery.</p>
+      
+     
+     
+   
+     
+      
+      <div id="passport-issued-hint" class="govuk-hint">
+        For example, EN1 1BE
+      </div>
+      <form class="form" action="address-postcode" method="post">
+        
+      
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-postcode">
+          Postcode
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="postcodeinput" type="text" autocomplete="postal-code">
+      </div>
+      
+   
+      
+   
+  </div>
+</div>
+</div>
+  <button class="govuk-button" data-module="govuk-button" type="submit">
+    Continue
+  </button>
+</fieldset>
+    </div>
+  </div>
+
+</form>
+<style>
+  .govuk-input {
+    margin-bottom: 15px;
+  }
+  .govuk-button {
+    margin-left: 10px;
+  }
+</style>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container app-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+  }) }}
+  {% endblock %}
+
+  {% block content %}
+  <div class="govuk-form-group">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Your details</span>
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            We've provided an access code for the other parent
+          </h1>
+        </legend>
+      </fieldset>
+      <div class="govuk-body">You will need to give the other parent this access code so they can enter it to confirm their details</div>
+
+        <form class="form" action="get-security-code" method="post">
+         
+          <div class="govuk-inset-text">
+            12345678
+          </div>
+          </div>
+         
+         </div>
+<p>They will need to use this URL to confirm their details <a href="www.pregnancy-loss-certificate.herokuapp.com/beta/v10/s-1/enter-access-code">www.pregnancy-loss-certificate.herokuapp.com/beta/v10/s-1/enter-access-code</a>.</p>
+         {{ govukButton({
+          text: "Continue",
+          href: "declaration",
+          isStartButton: false
+          }) }}
+    </form>
+   </div>
+
+</div>
+
+<style>
+  .govuk-button {
+    margin-left: 10px;
+  }
+</style>
+
+
+
+
+
+<style>
+ 
+</style>
+{% endblock %}

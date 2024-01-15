@@ -1,0 +1,96 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container app-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+<div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  <h1 class="govuk-fieldset__heading">
+    Get your security code
+    
+  </h1>
+</legend>
+
+      <form class="form" action="/v10-1/enter-security-code" method="post">
+     
+        
+<p>With the details you gave us, we think we've found your contact details from your health records.</p>
+<p>We now need to send you a security code. After 30 minutes your security code will not work.</p>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+              By email to Sa********@gmail.com
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+              By text to ********009
+            </label>
+          </div>
+            </div>
+          </fieldset>
+          
+        
+</div>
+</div>
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      What to do if you think these contact details are wrong
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    You’ll need to contact your GP practice and ask them to update your details before you can request a certificate. 
+  </div>
+</details>
+
+{{ govukButton({
+  text: "Continue",
+  href: "enter-security-code",
+  isStartButton: false
+  }) }}
+
+      </form>
+
+    </div>
+    
+  </div>
+  <style>
+    .govuk-fieldset__heading {
+      margin-bottom: 30px;
+    }
+    .govuk-grid-column-two-thirds {
+      padding-left: 0px;
+    }
+    .govuk-details__summary {
+      margin-top: 30px;
+    }
+  </style>
+
+{% endblock %}

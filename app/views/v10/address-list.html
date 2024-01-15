@@ -1,0 +1,84 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  <div class="govuk-grid-column-two-thirds">
+<div class="govuk-form-group">
+  <span class="govuk-caption-l">Your details</span>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          What is your address?
+        </h1>
+      </legend>
+      <label class="govuk-label" for="select-1">
+        Postcode
+      </label>
+      <p>NE1 OLD &nbsp; <a href="postcode">Change</a></p>
+      <div id="passport-issued-hint" class="govuk-hint">
+        This will be where your certificate is sent to.
+      </div>
+     
+      <select class="govuk-select" id="subject" name="subject" aria-describedby="subject-hint">
+        <option value="choose" selected>Select your address</option>
+        
+          <option value="1">1 Test Road, Town, NE1 OLD</option>
+          <option value="2">2 Test Road, Town, NE1 OLD</option>
+          <option value="3">3 Test Road, Town, NE1 OLD</option>
+          <option value="4">4 Test Road, Town, NE1 OLD</option>
+          <option value="5">5 Test Road, Town, NE1 OLD</option>
+          <option value="6">6 Test Road, Town, NE1 OLD</option>
+          <option value="7">7 Test Road, Town, Test, Test, Test, Test, Test, Test, Test, Test, Test, Test, Test, NE1 OLD</option>
+        </select>
+      </select>
+      <p><a href="/v10/what-is-your-address">My address isn't listed</a></p>
+    </div>
+    </div>
+    </div>
+    </div>
+      
+    </fieldset>
+      </form>
+    
+      <a class="govuk-button" href="/v10/add-parent">Continue</a>
+    </div>
+  </div>
+  <style>
+    .govuk-select {
+      box-sizing: border-box;
+height: 40px;
+max-width: 100%;
+padding: 4px;
+margin-bottom: 30px;
+}
+.govuk-button {
+  margin-left: 15px;
+}
+    
+  </style>
+
+{% endblock %}

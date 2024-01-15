@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %}
+
+{% set heading = "What do you want to do?" %}
+
+{% block pageTitle %}
+{{ heading }} – {{ serviceName }} – NHSBSA
+{% endblock %}
+
+{% block header %}
+  {% include 'v3-1/includes/header' %}
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">{{ heading }}</h1>
+
+  <ul class="govuk-grid-row govuk-card-group">
+    <li class="govuk-grid-column-one-third govuk-card-group__item">
+
+      <div class="govuk-card govuk-card--clickable">
+        <div class="govuk-card__content">
+          <h5 class="govuk-card__heading govuk-heading-m">
+            <a class="govuk-card__link" href="nonidv/request">Request a baby loss certificate <br>(for non IDV)</a>
+          </h5>
+
+        </div>
+      </div>
+
+    </li>
+
+  
+
+    <li class="govuk-grid-column-one-third govuk-card-group__item">
+
+      <div class="govuk-card govuk-card--clickable">
+        <div class="govuk-card__content">
+          <h5 class="govuk-card__heading govuk-heading-m">
+            <a class="govuk-card__link" href="search">Check the status of a certificate request</a>
+          </h5>
+
+        </div>
+      </div>
+
+    </li>
+  </ul>
+
+
+{% endblock %}

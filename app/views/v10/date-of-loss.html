@@ -1,0 +1,134 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container app-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  <div class="govuk-grid-column-two-thirds">
+  <span class="govuk-caption-l">Details on the certificate</span>
+
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Would you like the date of your baby loss on the certificate?
+          </h1>
+        </legend>
+        <form class="form" action="place-of-loss" method="post">
+          
+          <div class="govuk-inset-text">
+            You can enter a meaningful date if you do not know the exact date. 
+            <br>
+            This can be a partial date, such as a month and year, or year only. 
+          </div>
+       
+          
+          <div id="passport-issued-hint" class="govuk-hint">
+            If you select 'No' or 'I do not know the date of my baby loss', this section will be blank on the certificate.
+          </div>
+          
+       
+          
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+              <label class="govuk-label govuk-radios__label" for="contact">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+              <div class="govuk-form-group">
+                <div id="passport-issued-hint" class="govuk-hint">
+                  For example, 27 3 2021   
+                </div>
+                  <div class="govuk-date-input" id="date-loss">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="loss-date-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="loss-date-day" name="dol-day" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="loss-date-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="loss-date-month" name="dol-month" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="loss-date-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="loss-date-year" name="dol-year" type="text" inputmode="numeric" value="2022">
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" >
+              <label class="govuk-label govuk-radios__label" for="contact-2">
+                No
+              </label>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            </div>
+          
+          
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="baby-gender-version1" name="contact" type="radio" value="unknown">
+            <label class="govuk-label govuk-radios__label" for="unknown">
+              I do not know the date of my baby loss
+            </label>
+          </div>
+        
+        
+          
+      </fieldset>
+    </div>
+  </div>
+ 
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+  <style>
+    
+    .govuk-button {
+      margin-left: 15px;
+    }
+  </style>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container app-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+ 
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      We cannot provide a baby loss certificate because, at this time, we can only issue certificates for baby losses in the last 5 years
+    </h1>
+
+    
+    
+    <h3 class="govuk-heading-m">Support organisations</h3>
+    <p>The following organisations give support and advice:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href=''>Sands</a></li>
+      <li><a href=''>Tommy's</a></li>
+      <li><a href="">Antenatal Results and Choices (ARC)</a></li>
+      <li><a href="">Saying Goodbye</a></li>
+      <li><a href="">The Miscarriage Association</a></li>
+      <li><a href="">Petals</a></li>
+      <li><a href="">NHS How to access mental health services</a></li>
+    </ul>
+   </div>
+
+  </div>
+</div>
+  <style>
+    .govuk-fieldset__heading {
+      margin-bottom: 30px;
+    }
+    
+  </style>
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container app-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  <div class="govuk-grid-column-two-thirds">
+  <span class="govuk-caption-l">Details on the certificate</span>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  <h1 class="govuk-fieldset__heading">
+    Would you like the place of your baby loss on the certificate?
+    
+  </h1>
+</legend>
+
+<div class="govuk-inset-text">This does not need to be a full address. You can enter a town, city or hospital.</div>
+<p>You may not know the place of your baby loss.</p>
+<div id="passport-issued-hint" class="govuk-hint">
+  If you select ‘No’ or ‘I do not know the place of my baby loss’, this section will be blank on the certificate.</div>
+  
+
+      <form class="form" action="sex-of-baby" method="post">
+
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="years-yes" name="years" type="radio" value="yes" data-aria-controls="conditional-contact">
+            <label class="govuk-label govuk-radios__label" for="contact">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="email">
+                Place of loss
+              </label>
+              <div id="passport-issued-hint" class="govuk-hint">
+               
+                For example, Canterbury, Kent   
+              </div>
+
+              <input class="govuk-input" id="baby-name" name="place" type="text">
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="babys" name="years" type="radio" value="no" >
+            <label class="govuk-label govuk-radios__label" for="contact-2">
+              No
+            </label>
+          </div>
+          <div class="govuk-radios__divider">or</div>
+            </div>
+          
+          
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="baby-gender-version1" name="years" type="radio" value="unknown">
+            <label class="govuk-label govuk-radios__label" for="unknown">
+              I do not know the place of my baby loss
+            </label>
+          </div>
+          </fieldset>
+       </div>
+       </div>
+       </div>
+        <button class="govuk-button" data-module="govuk-button" type="submit">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+  <style>
+    .govuk-button {
+      margin-left: 15px;
+    }
+  </style>
+
+{% endblock %}

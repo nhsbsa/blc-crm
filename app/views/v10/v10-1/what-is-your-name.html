@@ -1,0 +1,93 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container app-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+  }) }}
+  {% endblock %}
+
+  {% block content %}
+  <div class="govuk-form-group">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What is your name?
+
+            </h1>
+          </legend>
+
+
+          <p>You must enter the names you registered with your GP. If you've changed your name, you will need to contact
+            your GP.</p>
+
+
+
+          <div id="passport-issued-hint" class="govuk-hint">
+            This is the name that will be printed on the certificate.
+          </div>
+
+          <form class="form" action="parent-name" method="post">
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="add-name">
+                First name
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="add-name" name="parent1-firstname" type="text">
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="one-third">
+                Last name
+              </label>
+              <input class="govuk-input govuk-!-width-two-thirds" id="add-name" name="parent1-lastname" type="text">
+            </div>
+            
+      </div>
+
+    </div>
+  </div>
+
+
+  {{ govukButton({
+    text: "Continue",
+    href: "enter-date-of-birth",
+    isStartButton: false
+    }) }}
+  </form>
+</div>
+</div>
+</div>
+<style>
+  .govuk-radios {
+    margin-bottom: 30px;
+  }
+
+  .govuk-details {
+    margin-top: 30px;
+  }
+
+  .govuk-button {
+    margin-left: 15px;
+  }
+</style>
+
+{% endblock %}

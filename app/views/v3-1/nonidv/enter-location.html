@@ -1,0 +1,104 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/index",
+    serviceName: "Baby loss certificate manager",
+    serviceUrl: "start",
+    navigation: [
+      {
+        href: "start",
+        text: "Home"
+      },
+      {
+        href: "nonidv/request",
+        text: "Request (non IDV)",
+        active: true
+      },
+      
+      {
+        href: "search",
+        text: "Search"
+      },
+      {
+        href: "start",
+        text: "Sign out"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-width-container app-width-container">
+ 
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  <div class="govuk-grid-column-two-thirds">
+<div class="govuk-form-group">
+  <span class="govuk-caption-l">Confirm your eligibility</span>
+  <fieldset class="govuk-fieldset">
+    
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  <h1 class="govuk-fieldset__heading">
+    Were you living in England at the time of your baby loss?
+  </h1>
+</legend>
+
+      <form class="form" action="location-england" method="post">
+        
+         
+        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="location-england-yes" name="location" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="location-england-yes">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="location-england-no" name="location" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="location-england-no">
+              No
+            </label>
+          </div>
+        </div>
+           
+          </fieldset>
+        </div>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Why we're asking you this question
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            You can only get a certificate if you lived in England when you lost your baby.
+          </div>
+        </details>
+
+        <button class="govuk-button" data-module="govuk-button" type="submit">
+          Continue
+        </button>
+
+      </form>
+    </div>
+    </div>
+  </div>
+  <style>
+    
+    .govuk-fieldset__legend--l {
+      margin-bottom: 30px;
+    }
+    .govuk-radios--inline {
+      margin-bottom: 30px;
+    }
+  </style>
+
+{% endblock %}

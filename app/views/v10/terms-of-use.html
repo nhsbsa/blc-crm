@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+ 
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+        <div class="govuk-width-container">
+          <h1 class="govuk-heading-l">Certificate of Baby Loss Terms of Use</h1>
+         
+          <p>The purpose of recording and issuing a Certificate of Baby Loss is to provide comfort and support to bereaved parents by recognising a loss.</p>
+          <h2 class="govuk-heading-m">Who is entitled</h2>
+
+
+          <p>You are entitled to a Certificate of Baby Loss if you have experienced a loss under 24 weeks gestation, are at least 16 years of age, and were living in England at the time of the loss.</p>
+          <p>Initially, only those who have experienced a loss since 1 September 2018 and are currently living in England are eligible to apply for a certificate. In future, once we have assessed the demand for this service:</p>
+        
+          <ul class="govuk-list govuk-list--bullet">
+            <li>there will be no time limits to request a certificate for an historic loss, and</li>
+            <li>those currently living outside of England will be able request a certificate for a loss that occurred while they were living in England</li>       
+          </ul>
+          <h2 class="govuk-heading-m">How you can request a certificate</h2>
+          <p>You can request a certificate online using the Certificate of Baby Loss service:</p>
+          <p><a href="">www.request-a-baby-loss-certificate.service.gov.uk</a></p>
+          <p>You will receive a paper certificate in the post within 14 days of us receiving your request.</p>
+          <h2 class="govuk-heading-m">Entitlements</h2>
+          <p>The certificate is produced following a self-declaration by the parent.</p>
+          <p>The certificate cannot be used as evidence of identity and does not allow entitlement to any services or benefits.</p>
+          <h2 class="govuk-heading-m">How to report a change in details</h2>
+          <p>If your details change from those provided for your certificate, you must submit a new request with your new details.</p>
+            <p>Once you have received the new certificate, you can destroy the old one.</p>
+            <h2 class="govuk-heading-m">Lost, damaged or incorrect certificates</h2>
+            <p>If you lose or damage your certificate, or there is an error on your certificate, you must submit a new request.</p>
+          <form action="/v10/confirmation-page" method="post" novalidate>
+            <div class="govuk-form-group">
+             
+             
+
+          
+        </form>
+  </main>
+</div>
+<style>
+  .govuk-checkboxes {
+    margin-bottom: 20px;
+  }
+
+</style>
+{% endblock %}

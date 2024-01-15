@@ -1,0 +1,50 @@
+{% extends "layouts/main.html" %}
+
+{% set heading = "What do you want to do?" %}
+
+{% block pageTitle %}
+{{ heading }} – {{ serviceName }} – NHSBSA
+{% endblock %}
+
+{% block header %}
+  {% include 'v3-1/includes/header' %}
+{% endblock %}
+
+{% block content %}
+
+    <form action="start-choice" method="post" autocomplete="off">
+
+      {{ govukRadios({
+        name: "start-choice",
+        fieldset: {
+          legend: {
+            text: heading,
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l govuk-!-margin-bottom-6"
+          }
+        },
+
+          items: [
+          {
+            value: "request",
+            text: "Request a baby loss certificate (For parent 1)"
+          },
+          {
+            value: "request2",
+            text: "Request a baby loss certificate (For parent 2)"
+          },
+          {
+            value: "status",
+            text: "Check the status of an application"
+          }
+        ]
+      }) }}
+
+    {{ govukButton({
+    text: "Search",
+    classes: "govuk-!-margin-top-0"
+    }) }}
+
+    </form>
+
+{% endblock %}
