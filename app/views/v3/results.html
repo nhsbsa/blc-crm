@@ -89,8 +89,9 @@
     <div class="search-card__status">
       {{ data['applications'][data['results'][i]].status | tag | safe }}<br>
       <p class="govuk-!-font-size-14 govuk-!-margin-top-2">Submitted:<br> {{ data['applications'][data['results'][i]].submitted | govukDate }}<br>{{ data['applications'][data['results'][i]].submitted | govukTime }}</p>
+       <p class="govuk-!-font-size-14 govuk-!-margin-top-2">Last updated:<br> {{ data['applications'][data['results'][i]].submitted | govukDate }}<br>{{ data['applications'][data['results'][i]].submitted | govukTime }}</p>
     </div>
-    
+
 
     <div class="search-card__copy">
 
